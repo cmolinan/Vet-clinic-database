@@ -1,5 +1,6 @@
 /* Database schema to keep the structure of entire database. */
 
+-- ** DAY 1 **
 CREATE TABLE animals(
   id     INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   name    varchar,
@@ -9,10 +10,11 @@ CREATE TABLE animals(
   weight_kg real
 );
 
+-- ** DAY 2 **
 --Add a column species of type string to your animals table. Modify your schema.sql file.
 alter table animals add column species varchar;
 
--- ** DAY 2 
+-- ** DAY 3 
 
 -- Create a table named owners with the following columns:
 -- id: integer (set it as autoincremented PRIMARY KEY)
