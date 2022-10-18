@@ -8,3 +8,6 @@ CREATE TABLE animals(
   neutered  bit,
   weight_kg real
 );
+
+--Add a column species of type string to your animals table. Modify your schema.sql file.
+alter table animals add column species varchar;
