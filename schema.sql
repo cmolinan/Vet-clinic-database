@@ -70,7 +70,7 @@ CREATE TABLE vets (
 -- Create a "join table" called specializations to handle this relationship.
 
 CREATE TABLE specialization (
-    id INT,
+    id INT GENERATED ALWAYS AS IDENTITY,
     vet_id INT,
     species_id INT,
     FOREIGN KEY (vet_id) REFERENCES vets(id),
