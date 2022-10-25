@@ -1,7 +1,9 @@
 # Vet Clinic Database 
 
 > In this project, I used a PostgreSQL relational database to create the initial data structure for a vet clinic. 
-> A table to store animals' information has been created, inserting some data into it.
+> A table to store animals' information has been created, inserting some data into it. 
+> After that, more tables has been created, with foreign keys to join tables, and indexes for improve querys performance.
+> Also, I created a new database based on a diagram
 > The repository contents the files generated while working on the project.
 ## Getting Started
 
