@@ -222,3 +222,8 @@ WHERE D.name = 'Maisy Smith'
 GROUP BY S.name, D.Name
 ORDER BY COUNT(S.Name) DESC
 LIMIT 1
+
+-- ** DAY 5 **
+explain analyze SELECT COUNT(*) FROM visits where animals_id = 4; (1.307s)
+explain analyze SELECT * FROM visits where vets_id = 2;  (2.49s)
+explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';  (1.126s)
