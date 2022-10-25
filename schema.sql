@@ -92,3 +92,16 @@ CREATE TABLE visits (
     PRIMARY KEY (id)
 );
 
+
+-- ** DAY 5 **
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Add index to animals_id of the table visits
+CREATE INDEX idx_visits_animals_id ON visits(animals_id);
+
+-- Add index to animals_id of the table visits
+CREATE INDEX idx_visits_vets_id ON visits(vets_id);
+
+-- Add index to animals_id of the table visits
+CREATE INDEX idx_owners_email ON owners(email);

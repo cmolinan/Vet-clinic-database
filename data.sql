@@ -140,3 +140,16 @@ VALUES
   ('2019-05-15', 9, 2), ('2020-02-27', 9, 2), ('2020-08-03', 9, 2),
 	('2020-05-24', 10, 3),('2021-01-11', 10, 1);
 
+
+-- ** DAY 5 **
+
+-- Insert the following data for vets:  (took 2.19min aprox x 3 times) 
+INSERT INTO visits (animals_id, vets_id, date_of_visit) 
+SELECT * FROM 
+	(SELECT id FROM animals) animals_id, 
+	(SELECT id FROM vets) vets_id, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+
+-- (This took 22s x 2 times)
+INSERT INTO owners (full_name, email) SELECT 'Owner ' || generate_series(1,2500000), 'owner_' 
+|| generate_series(1,2500000) || '@mail.com';
+
